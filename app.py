@@ -60,11 +60,11 @@ def predict(preprocessed_input):
 ######################################### STREAMLIT #########################################
 #############################################################################################
 
-# ### SETTINGS ###
-# st.set_page_config(
-#     page_title="PREDIMMO - Quartiers californiens",
-#     page_icon=Image.open('./assets/imgs/logo_predimmo.PNG')
-# )
+### SETTINGS ###
+st.set_page_config(
+    page_title="PREDIMMO - Quartiers californiens",
+    page_icon=Image.open('./assets/imgs/logo_predimmo.PNG')
+)
 
 
 ### BODY ###

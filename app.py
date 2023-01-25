@@ -81,17 +81,17 @@ with col2:
 image = Image.open('./assets/imgs/san-francisco-210230_960_720.jpg')
 st.image(image, caption='Maisons de San Francisco')
 
-# # EXPANDER
-# with st.expander("Rappels sur le prix médian des logements de quartiers californiens"):
-#     df = pd.read_csv(
-#         r'./data/traindata_ori.csv', delimiter=',', decimal='.')
-#     median_house_value = df['median_house_value']
-#     fig, ax = plt.subplots()
-#     ax.hist(median_house_value, bins=20)
-#     ax.set_title(
-#         "Distribution du prix médian d'un quartier de logements en Californie")
-#     ax.set_xlabel("Prix médian d'un quartier")
-#     st.pyplot(fig)
+# EXPANDER
+with st.expander("Rappels sur le prix médian des logements de quartiers californiens"):
+    df = pd.read_csv(
+        r'./data/traindata_ori.csv', delimiter=',', decimal='.')
+    median_house_value = df['median_house_value']
+    fig, ax = plt.subplots()
+    ax.hist(median_house_value, bins=20)
+    ax.set_title(
+        "Distribution du prix médian d'un quartier de logements en Californie")
+    ax.set_xlabel("Prix médian d'un quartier")
+    st.pyplot(fig)
 
 st.subheader(
     "Veuillez entrer les caractéristiques du quartier de logement qui vous intéresse :")

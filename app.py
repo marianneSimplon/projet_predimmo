@@ -1,4 +1,3 @@
-# streamlit run app.py
 import os
 import streamlit as st
 import pandas as pd
@@ -61,38 +60,38 @@ def predict(preprocessed_input):
 ######################################### STREAMLIT #########################################
 #############################################################################################
 
-### SETTINGS ###
-st.set_page_config(
-    page_title="PREDIMMO - Quartiers californiens",
-    page_icon=Image.open('./assets/imgs/logo_predimmo.PNG')
-)
+# ### SETTINGS ###
+# st.set_page_config(
+#     page_title="PREDIMMO - Quartiers californiens",
+#     page_icon=Image.open('./assets/imgs/logo_predimmo.PNG')
+# )
 
 
-### BODY ###
+# ### BODY ###
 
-col1, col2 = st.columns([1, 3])
-with col1:
-    logo = Image.open('./assets/imgs/logo_predimmo.PNG')
-    st.image(logo)
+# col1, col2 = st.columns([1, 3])
+# with col1:
+#     logo = Image.open('./assets/imgs/logo_predimmo.PNG')
+#     st.image(logo)
 
-with col2:
-    st.title("Prédiction du prix médian d'un quartier de logements en Californie")
+# with col2:
+#     st.title("Prédiction du prix médian d'un quartier de logements en Californie")
 
 
-image = Image.open('./assets/imgs/san-francisco-210230_960_720.jpg')
-st.image(image, caption='Maisons de San Francisco')
+# image = Image.open('./assets/imgs/san-francisco-210230_960_720.jpg')
+# st.image(image, caption='Maisons de San Francisco')
 
-# EXPANDER
-with st.expander("Rappels sur le prix médian des logements de quartiers californiens"):
-    df = pd.read_csv(
-        r'./data/traindata_ori.csv', delimiter=',', decimal='.')
-    median_house_value = df['median_house_value']
-    fig, ax = plt.subplots()
-    ax.hist(median_house_value, bins=20)
-    ax.set_title(
-        "Distribution du prix médian d'un quartier de logements en Californie")
-    ax.set_xlabel("Prix médian d'un quartier")
-    st.pyplot(fig)
+# # EXPANDER
+# with st.expander("Rappels sur le prix médian des logements de quartiers californiens"):
+#     df = pd.read_csv(
+#         r'./data/traindata_ori.csv', delimiter=',', decimal='.')
+#     median_house_value = df['median_house_value']
+#     fig, ax = plt.subplots()
+#     ax.hist(median_house_value, bins=20)
+#     ax.set_title(
+#         "Distribution du prix médian d'un quartier de logements en Californie")
+#     ax.set_xlabel("Prix médian d'un quartier")
+#     st.pyplot(fig)
 
 st.subheader(
     "Veuillez entrer les caractéristiques du quartier de logement qui vous intéresse :")
@@ -121,8 +120,5 @@ if st.button(label="Estimer le prix médian"):
         else:
             st.write(
                 "Veuillez remplir tous les champs du formulaire s'il vous plait")
-    # except Exception as e:
     except Exception:
         st.write("Une erreur s'est produite.")
-        # st.write(e)
-        # print(e)

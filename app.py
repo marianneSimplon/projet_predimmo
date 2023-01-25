@@ -67,19 +67,19 @@ def predict(preprocessed_input):
 # )
 
 
-# ### BODY ###
+### BODY ###
 
-# col1, col2 = st.columns([1, 3])
-# with col1:
-#     logo = Image.open('./assets/imgs/logo_predimmo.PNG')
-#     st.image(logo)
+col1, col2 = st.columns([1, 3])
+with col1:
+    logo = Image.open('./assets/imgs/logo_predimmo.PNG')
+    st.image(logo)
 
-# with col2:
-#     st.title("Prédiction du prix médian d'un quartier de logements en Californie")
+with col2:
+    st.title("Prédiction du prix médian d'un quartier de logements en Californie")
 
 
-# image = Image.open('./assets/imgs/san-francisco-210230_960_720.jpg')
-# st.image(image, caption='Maisons de San Francisco')
+image = Image.open('./assets/imgs/san-francisco-210230_960_720.jpg')
+st.image(image, caption='Maisons de San Francisco')
 
 # # EXPANDER
 # with st.expander("Rappels sur le prix médian des logements de quartiers californiens"):
